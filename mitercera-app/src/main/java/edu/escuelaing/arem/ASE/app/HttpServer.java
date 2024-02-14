@@ -2,40 +2,32 @@ package edu.escuelaing.arem.ASE.app;
 
 import java.io.*;
 import java.net.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiConsumer;
 
-/**
- * Clase que crea el servidor HTTP
- */
 public class HttpServer {
     private static final String STATIC_FILES_PATH = "/public/";
+    private static final Map<String, BiConsumer<Socket, String>> getHandlers = new HashMap<>();
+    private static final Map<String, BiConsumer<Socket, String>> postHandlers = new HashMap<>();
+    private static String responseType = "text/html"; // Default response type
+    private static final Map<String, String> movieCache = new HashMap<>();
 
-    /**
-     * Metodo principal de la clase que inicia el servidor y escucha conexiones en el puerto 35000.
-     * @param args Argumentos de linea de comandos (no utilizados).
-     * @throws IOException Si ocurre un error de entrada/salida al abrir el socket del servidor.
-     */ 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = null;
+        // Inicia el servidor HTTP en el puerto 35000
+        ServerSocket serverSocket = new ServerSocket(35000);
+        System.out.println("Server listening on port 35000...");
 
-        try {
-            serverSocket = new ServerSocket(35000);
-            System.out.println("Server listening on port 35000...");
+        registerGetHandler("/hello", HttpHandler.helloGetHandler);
+        registerPostHandler("/echo", HttpHandler.echoPostHandler);
 
-            while (true) {
-                Socket clientSocket = serverSocket.accept();
-                new Thread(() -> handleRequest(clientSocket)).start();
-            }
-        } catch (IOException e) {
-            System.err.println("Could not listen on port: 35000.");
-            System.exit(1);
+        // Loop infinito para escuchar conexiones entrantes
+        while (true) {
+            Socket clientSocket = serverSocket.accept(); // Acepta una conexión entrante
+            new Thread(() -> handleRequest(clientSocket)).start(); // Maneja la solicitud en un nuevo hilo
         }
-        serverSocket.close();
     }
 
-    /**
-     * Metodo que maneja la solicitud del cliente en un nuevo hilo separado.
-     * @param clientSocket Socket del cliente.
-     */
     private static void handleRequest(Socket clientSocket) {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -43,6 +35,7 @@ public class HttpServer {
             String inputLine;
             StringBuilder request = new StringBuilder();
 
+            // Lee la solicitud del cliente
             while ((inputLine = in.readLine()) != null) {
                 if (inputLine.isEmpty()) {
                     break;
@@ -50,27 +43,53 @@ public class HttpServer {
                 request.append(inputLine).append("\r\n");
             }
             String requestString = request.toString();
-            
-            if (requestString.contains("GET /title?name=")) {
-                String[] parts = requestString.split(" ");
-                String title = parts[1].substring("/title?name=".length());
-                try {
-                    String movieInfo = Cache.inMemory(title);
-                    out.println("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + movieInfo);
-                } catch (IOException e) {
-                    out.println("HTTP/1.1 500 Internal Server Error\r\n\r\nError processing request");
+
+            // Parsea la solicitud para obtener el método y la ruta
+            String[] requestLines = requestString.split("\r\n");
+            String[] requestParts = requestLines[0].split(" ");
+            String requestType = requestParts[0];
+            String path = requestParts[1];
+
+            // Maneja la solicitud GET
+            if (requestType.equals("GET")) {
+                BiConsumer<Socket, String> getHandler = getHandlers.get(path);
+                if (getHandler != null) {
+                    getHandler.accept(clientSocket, "");
+                } else if (path.startsWith("/action")) {
+                    serveStaticFile(path.substring("/action".length()), clientSocket.getOutputStream());
+                }else if(requestString.contains(" /title?name=")){
+                    String[] parts = requestString.split(" ");
+                    String title = parts[1].substring("/title?name=".length());
+                    try {
+                        String movieInfo = Cache.inMemory(title);
+                        out.println("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + movieInfo);
+                    } catch (IOException e) {
+                        out.println("HTTP/1.1 500 Internal Server Error\r\n\r\nError processing request");
+                    }
+                    
+                } else {
+                    out.println("HTTP/1.1 404 Not Found\r\n\r\n");
                 }
-            }
-            if (requestString.startsWith("GET /image.jpg")) {
-                serveFile("image.jpg", clientSocket.getOutputStream());
-            }
-            String[] parts = requestString.split(" ");
+                String[] parts = requestString.split(" ");
             String resource = parts[1].substring(1);
+            serveStaticFile(resource, clientSocket.getOutputStream());
             try {
-                serveFile(resource, clientSocket.getOutputStream());
+                serveStaticFile(resource, clientSocket.getOutputStream());
             } catch (IOException e) {
                 out.println("HTTP/1.1 404 Not Found\r\n");
             }
+            }
+            // Maneja la solicitud POST
+            else if (requestType.equals("POST")) {
+                BiConsumer<Socket, String> postHandler = postHandlers.get(path);
+                if (postHandler != null) {
+                    postHandler.accept(clientSocket, "");
+                } else {
+                    out.println("HTTP/1.1 404 Not Found\r\n\r\n");
+                }
+            }
+            
+
             out.close();
             in.close();
             clientSocket.close();
@@ -82,14 +101,8 @@ public class HttpServer {
     private static InputStream getResourceAsStream(String filename) {
         return HttpServer.class.getResourceAsStream(STATIC_FILES_PATH + filename);
     }
-    /**
-     * Método que sirve un archivo estático al cliente.
-     *
-     * @param filename   Nombre del archivo.
-     * @param outStream  Flujo de salida del cliente.
-     * @throws IOException Si ocurre un error de entrada/salida al servir el archivo.
-     */
-    private static void serveFile(String filename, OutputStream outStream) throws IOException {
+
+    private static void serveStaticFile(String filename, OutputStream outStream) throws IOException {
         InputStream inputStream = getResourceAsStream(filename);
         if (inputStream != null) {
             String contentType = getContentType(filename);
@@ -106,17 +119,10 @@ public class HttpServer {
             inputStream.close();
         } else {
             PrintWriter out = new PrintWriter(outStream, true);
-            out.println("HTTP/1.1 404 Not Found\r\n");
+            out.println("\r\n");
         }
     }
 
-
-        /**
-     * Método que devuelve el tipo de contenido basado en el nombre del archivo.
-     *
-     * @param filename Nombre del archivo.
-     * @return Tipo de contenido.
-     */
     private static String getContentType(String filename) {
         if (filename.endsWith(".html")) {
             return "text/html";
@@ -135,6 +141,19 @@ public class HttpServer {
         }
     }
 
+    public static void registerGetHandler(String path, BiConsumer<Socket, String> handler) {
+        getHandlers.put(path, handler);
+    }
+
+    public static void registerPostHandler(String path, BiConsumer<Socket, String> handler) {
+        postHandlers.put(path, handler);
+    }
+
+
+
+    public static void setResponseType(String type) {
+        responseType = type;
+    }
 }
 
 // java -jar target/mitercera-app-1.0-SNAPSHOT.jar

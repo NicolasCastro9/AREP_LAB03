@@ -1,4 +1,7 @@
 edu\escuelaing\arem\ASE\app\Cache.class
+edu\escuelaing\arem\ASE\app\HttpRequestHandler.class
+edu\escuelaing\arem\ASE\app\StaticFileServer.class
+edu\escuelaing\arem\ASE\app\MySparkServices.class
 edu\escuelaing\arem\ASE\app\MovieInfo$Rating.class
 edu\escuelaing\arem\ASE\app\HttpServer.class
 edu\escuelaing\arem\ASE\app\HttpConnection.class
