@@ -6,14 +6,14 @@
 'Cp1252'
 -protected
 -sourcepath
-'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java;C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/target/generated-sources/annotations'
+'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java'
 -author
 -bottom
 'Copyright &#169; 2024. All rights reserved.'
 -charset
 'UTF-8'
 -d
-'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/target/apidocs'
+'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
@@ -31,22 +31,21 @@
 'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/MovieInfo.java'
 C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.8.8\gson-2.8.8.jar = 1629475731000
 C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\src\main\java = 1707961787617
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\generated-sources\annotations = 1707966317900
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allclasses-index.html = 1707966328617
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allpackages-index.html = 1707966328625
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\constant-values.html = 1707966328382
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\deprecated-list.html = 1707966328489
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\element-list = 1707966328341
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\help-doc.html = 1707966328646
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index-all.html = 1707966328600
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index.html = 1707966328632
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\jquery-ui.overrides.css = 1707966328865
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\member-search-index.js = 1707966328589
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\module-search-index.js = 1707966328570
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\overview-tree.html = 1707966328476
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\package-search-index.js = 1707966328574
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\script.js = 1707966328685
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\search.js = 1707966328703
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\stylesheet.css = 1707966328664
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\tag-search-index.js = 1707966328593
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\type-search-index.js = 1707966328578
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\allclasses-index.html = 1707966484345
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\allpackages-index.html = 1707966484353
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\constant-values.html = 1707966484114
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\deprecated-list.html = 1707966484232
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\element-list = 1707966484073
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\help-doc.html = 1707966484372
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\index-all.html = 1707966484331
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\index.html = 1707966484360
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\jquery-ui.overrides.css = 1707966484543
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\member-search-index.js = 1707966484322
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\module-search-index.js = 1707966484300
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\overview-tree.html = 1707966484217
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\package-search-index.js = 1707966484304
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\script.js = 1707966484391
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\search.js = 1707966484402
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\stylesheet.css = 1707966484386
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\tag-search-index.js = 1707966484325
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\site\apidocs\type-search-index.js = 1707966484314

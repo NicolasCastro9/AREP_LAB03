@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.escuelaing.arem.ASE.app.AppTest" time="0.484" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.escuelaing.arem.ASE.app.AppTest" time="0.539" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire9652326649209917446\surefirebooter-20240214220521017_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire9652326649209917446 2024-02-14T22-05-20_383-jvmRun1 surefire-20240214220521017_1tmp surefire_0-20240214220521017_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire17820110538464070894\surefirebooter-20240214220745626_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire17820110538464070894 2024-02-14T22-07-44_750-jvmRun1 surefire-20240214220745626_1tmp surefire_0-20240214220745626_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\test-classes;C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\classes;C:\Users\Lenovo\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Lenovo\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.8.8\gson-2.8.8.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire9652326649209917446\surefirebooter-20240214220521017_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire17820110538464070894\surefirebooter-20240214220745626_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -55,17 +55,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testApiConnection" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.268">
+  <testcase name="testApiConnection" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.31">
     <system-out><![CDATA[GET Response Code: 200
 {"Title":"Ted","Year":"2012","Rated":"R","Released":"29 Jun 2012","Runtime":"106 min","Genre":"Comedy","Director":"Seth MacFarlane","Writer":"Seth MacFarlane, Alec Sulkin, Wellesley Wild","Actors":"Mark Wahlberg, Mila Kunis, Seth MacFarlane","Plot":"John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear, Ted or his girlfriend, Lori.","Language":"English, Japanese, Ukrainian","Country":"United States","Awards":"Nominated for 1 Oscar. 13 wins & 28 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.9/10"},{"Source":"Rotten Tomatoes","Value":"69%"},{"Source":"Metacritic","Value":"62/100"}],"Metascore":"62","imdbRating":"6.9","imdbVotes":"651,110","imdbID":"tt1637725","Type":"movie","DVD":"21 Jul 2015","BoxOffice":"$218,815,487","Production":"N/A","Website":"N/A","Response":"True"}
 ]]></system-out>
   </testcase>
-  <testcase name="testBuildHtmlFromJson" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.063"/>
-  <testcase name="testCache" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.089">
+  <testcase name="testBuildHtmlFromJson" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.064"/>
+  <testcase name="testCache" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.104">
     <system-out><![CDATA[GET Response Code: 200
 {"Title":"Titanic","Year":"1997","Rated":"PG-13","Released":"19 Dec 1997","Runtime":"194 min","Genre":"Drama, Romance","Director":"James Cameron","Writer":"James Cameron","Actors":"Leonardo DiCaprio, Kate Winslet, Billy Zane","Plot":"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.","Language":"English, Swedish, Italian, French","Country":"United States, Mexico","Awards":"Won 11 Oscars. 126 wins & 83 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.9/10"},{"Source":"Rotten Tomatoes","Value":"88%"},{"Source":"Metacritic","Value":"75/100"}],"Metascore":"75","imdbRating":"7.9","imdbVotes":"1,267,049","imdbID":"tt0120338","Type":"movie","DVD":"01 Jun 2014","BoxOffice":"$674,292,608","Production":"N/A","Website":"N/A","Response":"True"}
 ]]></system-out>
   </testcase>
   <testcase name="testBuildHtmlFromJson2" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0"/>
-  <testcase name="testBuildHtmlFromJson3" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0.001"/>
+  <testcase name="testBuildHtmlFromJson3" classname="edu.escuelaing.arem.ASE.app.AppTest" time="0"/>
 </testsuite>
