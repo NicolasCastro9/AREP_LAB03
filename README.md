@@ -77,3 +77,18 @@ Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el p
    ```  
 ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/4c14fd5b-d65a-4631-882d-cfa05a45a5ab)
 
+
+## CONSTRUIDO CON
+
+MAVEN -  framework de gestión de proyectos de software
+
+## Dependencias
+JUnit: Framework de pruebas unitarias para Java.
+
+Gson: Biblioteca de Google para trabajar con JSON en Java.
+
+## Autor
+### Nicolás Castro Jaramillo
+
+## Licencia
+Este proyecto está bajo la licencia MIT.
