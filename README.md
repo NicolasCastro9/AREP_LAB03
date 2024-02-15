@@ -15,3 +15,11 @@ HttpHandler: Esta clase define los manejadores para las solicitudes GET y POST. 
 ## Pre-Requisitos
 
 Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el proyecto.
+
+## Instrucciones de uso
+
+1. Clona el repositorio a tu máquina local:
+   ```
+   git clone https://github.com/NicolasCastro9/AREP_LAB03.git
+   ```
+2. Abrir en un IDE el proyecto descargado y ejecutar el archivo java HttpServer.java
