@@ -26,29 +26,27 @@
 'mitercera-app 1.0-SNAPSHOT API'
 'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/Cache.java'
 'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/HttpConnection.java'
-'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/HttpRequestHandler.java'
+'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/HttpHandler.java'
 'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/HttpServer.java'
 'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/MovieInfo.java'
-'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/MySparkServices.java'
-'C:/Users/Lenovo/Documents/2024/AREP/LABORATORIOS/AREP_LAB03/mitercera-app/src/main/java/edu/escuelaing/arem/ASE/app/StaticFileServer.java'
 C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.8.8\gson-2.8.8.jar = 1629475731000
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\src\main\java = 1707685117165
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\generated-sources\annotations = 1707876871695
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allclasses-index.html = 1707876883205
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allpackages-index.html = 1707876883213
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\constant-values.html = 1707876882931
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\deprecated-list.html = 1707876883079
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\element-list = 1707876882868
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\help-doc.html = 1707876883233
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index-all.html = 1707876883189
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index.html = 1707876883220
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\jquery-ui.overrides.css = 1707876883335
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\member-search-index.js = 1707876883180
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\module-search-index.js = 1707876883167
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\overview-tree.html = 1707876883065
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\package-search-index.js = 1707876883171
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\script.js = 1707876883259
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\search.js = 1707876883272
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\stylesheet.css = 1707876883252
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\tag-search-index.js = 1707876883184
-C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\type-search-index.js = 1707876883174
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\src\main\java = 1707956687131
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\generated-sources\annotations = 1707959818937
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allclasses-index.html = 1707959830229
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\allpackages-index.html = 1707959830241
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\constant-values.html = 1707959830015
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\deprecated-list.html = 1707959830118
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\element-list = 1707959829929
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\help-doc.html = 1707959830291
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index-all.html = 1707959830213
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\index.html = 1707959830277
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\jquery-ui.overrides.css = 1707959830395
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\member-search-index.js = 1707959830205
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\module-search-index.js = 1707959830194
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\overview-tree.html = 1707959830103
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\package-search-index.js = 1707959830198
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\script.js = 1707959830309
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\search.js = 1707959830316
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\stylesheet.css = 1707959830305
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\tag-search-index.js = 1707959830208
+C:\Users\Lenovo\Documents\2024\AREP\LABORATORIOS\AREP_LAB03\mitercera-app\target\apidocs\type-search-index.js = 1707959830201

@@ -6,28 +6,54 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
+
+/**
+ * Clase principal que contiene el metodo main que inicia el servidor
+ */
 public class HttpServer {
+    // Ruta al directorio de archivos estáticos
     private static final String STATIC_FILES_PATH = "/public/";
+     // Mapas para almacenar los manejadores GET y POST registrados
     private static final Map<String, BiConsumer<Socket, String>> getHandlers = new HashMap<>();
     private static final Map<String, BiConsumer<Socket, String>> postHandlers = new HashMap<>();
     private static String responseType = "text/html"; // Default response type
     private static final Map<String, String> movieCache = new HashMap<>();
 
+
+        /**
+     * Metodo principal para iniciar el servidor HTTP en el puerto especificado.
+     * 
+     * @param args Argumentos de línea de comandos (no utilizados)
+     * @throws IOException Si ocurre un error de E/S al intentar iniciar el servidor en el puerto especificado
+     */
     public static void main(String[] args) throws IOException {
-        // Inicia el servidor HTTP en el puerto 35000
-        ServerSocket serverSocket = new ServerSocket(35000);
-        System.out.println("Server listening on port 35000...");
 
-        registerGetHandler("/hello", HttpHandler.helloGetHandler);
-        registerPostHandler("/echo", HttpHandler.echoPostHandler);
+        ServerSocket serverSocket = null;
+        try{
+            serverSocket = new ServerSocket(35000);
+            System.out.println("Server listening on port 35000...");
 
-        // Loop infinito para escuchar conexiones entrantes
+            registerGetHandler("/hello", HttpHandler.helloGetHandler);
+            registerPostHandler("/echo", HttpHandler.echoPostHandler);
+
+        
         while (true) {
-            Socket clientSocket = serverSocket.accept(); // Acepta una conexión entrante
-            new Thread(() -> handleRequest(clientSocket)).start(); // Maneja la solicitud en un nuevo hilo
+            Socket clientSocket = serverSocket.accept(); 
+            new Thread(() -> handleRequest(clientSocket)).start(); 
         }
-    }
+        } catch (IOException e) {
+            System.err.println("Could not listen on port: 35000.");
+            System.exit(1);
+        }
+        serverSocket.close();
 
+        
+    }
+       /**
+     *  Metodo que maneja la solicitud recibida en el socket proporcionado.
+     * 
+     * @param clientSocket El socket del cliente que realiza la solicitud
+     */
     private static void handleRequest(Socket clientSocket) {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -51,13 +77,13 @@ public class HttpServer {
             String path = requestParts[1];
 
             // Maneja la solicitud GET
-            if (requestType.equals("GET")) {
+            if (requestType.contains("GET")) {
                 BiConsumer<Socket, String> getHandler = getHandlers.get(path);
                 if (getHandler != null) {
                     getHandler.accept(clientSocket, "");
                 } else if (path.startsWith("/action")) {
                     serveStaticFile(path.substring("/action".length()), clientSocket.getOutputStream());
-                }else if(requestString.contains(" /title?name=")){
+                }else if(requestString.contains("GET /title?name=")){
                     String[] parts = requestString.split(" ");
                     String title = parts[1].substring("/title?name=".length());
                     try {
@@ -67,12 +93,9 @@ public class HttpServer {
                         out.println("HTTP/1.1 500 Internal Server Error\r\n\r\nError processing request");
                     }
                     
-                } else {
-                    out.println("HTTP/1.1 404 Not Found\r\n\r\n");
                 }
                 String[] parts = requestString.split(" ");
-            String resource = parts[1].substring(1);
-            serveStaticFile(resource, clientSocket.getOutputStream());
+                String resource = parts[1].substring(1);
             try {
                 serveStaticFile(resource, clientSocket.getOutputStream());
             } catch (IOException e) {
@@ -97,11 +120,22 @@ public class HttpServer {
             e.printStackTrace();
         }
     }
-
+    /**
+     *  Metodo que devuelve un flujo de entrada para el recurso especificado.
+     * 
+     * @param filename Nombre del archivo del recurso
+     * @return InputStream Flujo de entrada para el recurso especificado
+     */
     private static InputStream getResourceAsStream(String filename) {
         return HttpServer.class.getResourceAsStream(STATIC_FILES_PATH + filename);
     }
-
+    /**
+     *  Metodo que sirve un archivo estatico al cliente a través del socket proporcionado.
+     * 
+     * @param filename Nombre del archivo estatico a servir
+     * @param outStream Flujo de salida del socket del cliente
+     * @throws IOException Si ocurre un error de E/S al servir el archivo estatico
+     */
     private static void serveStaticFile(String filename, OutputStream outStream) throws IOException {
         InputStream inputStream = getResourceAsStream(filename);
         if (inputStream != null) {
@@ -122,7 +156,12 @@ public class HttpServer {
             out.println("\r\n");
         }
     }
-
+    /**
+     * Metodo que obtiene el tipo de contenido MIME para el archivo especificado.
+     * 
+     * @param filename Nombre del archivo
+     * @return String Tipo de contenido MIME
+     */
     private static String getContentType(String filename) {
         if (filename.endsWith(".html")) {
             return "text/html";
@@ -140,20 +179,34 @@ public class HttpServer {
             return "application/octet-stream";
         }
     }
-
+    /**
+     * Registra un manejador GET para la ruta especificada.
+     * 
+     * @param path Ruta para la cual se registra el manejador GET
+     * @param handler Manejador GET a registrar
+     */
     public static void registerGetHandler(String path, BiConsumer<Socket, String> handler) {
         getHandlers.put(path, handler);
     }
-
+    /**
+     * Registra un manejador POST para la ruta especificada.
+     * 
+     * @param path Ruta para la cual se registra el manejador POST
+     * @param handler Manejador POST a registrar
+     */
     public static void registerPostHandler(String path, BiConsumer<Socket, String> handler) {
         postHandlers.put(path, handler);
     }
 
 
-
+        /**
+     * Establece el tipo de respuesta predeterminado.
+     * 
+     * @param type Tipo de respuesta predeterminado
+     */
     public static void setResponseType(String type) {
         responseType = type;
     }
 }
 
-// java -jar target/mitercera-app-1.0-SNAPSHOT.jar
+
