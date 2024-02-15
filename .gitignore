@@ -1,6 +1,6 @@
 # Directorios
 bin/
-mitercera-app/target/
+target/
 node_modules/
 dist/
 out/
