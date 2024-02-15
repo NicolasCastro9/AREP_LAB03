@@ -70,4 +70,10 @@ Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el p
    ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/dcb8ca70-1d3f-4f8e-9df5-e93788621d60)
 
 
-8. 
+8. Obtener información de una pelicula como un formato JSON Ejemplo:
+
+   ```
+   http://localhost:35000/title?name=TED
+   ```  
+![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/4c14fd5b-d65a-4631-882d-cfa05a45a5ab)
+
