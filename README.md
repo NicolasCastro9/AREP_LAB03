@@ -56,4 +56,18 @@ Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el p
    ```   
    ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/4a389e07-94d7-415c-91d7-d58eafdb39cf)
 
-7. 
+
+6. Ver MANEJO DE SOLICITUDES GET Y POST con postman
+
+   ```
+   http://localhost:35000/hello
+   ```  
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/63ddf133-f95c-4e31-b10a-9a7ec3ac7bb9)
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/80d99865-3a05-4614-b95d-7bbf6e6b75ac)
+   ```
+   http://localhost:35000/echo
+   ```  
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/dcb8ca70-1d3f-4f8e-9df5-e93788621d60)
+
+
+8. 
