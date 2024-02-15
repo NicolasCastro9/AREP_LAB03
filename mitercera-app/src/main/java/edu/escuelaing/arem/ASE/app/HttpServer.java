@@ -88,7 +88,7 @@ public class HttpServer {
                     String title = parts[1].substring("/title?name=".length());
                     try {
                         String movieInfo = Cache.inMemory(title);
-                        out.println("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n" + movieInfo);
+                        out.println("HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + movieInfo);
                     } catch (IOException e) {
                         out.println("HTTP/1.1 500 Internal Server Error\r\n\r\nError processing request");
                     }
