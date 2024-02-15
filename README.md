@@ -22,4 +22,38 @@ Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el p
    ```
    git clone https://github.com/NicolasCastro9/AREP_LAB03.git
    ```
-2. Abrir en un IDE el proyecto descargado y ejecutar el archivo java HttpServer.java
+2. En la consola de comandos navegar hasta el directorio donde se encuentra el pom del proyecto
+   ```
+   cd mitercera-app
+   ```
+3. Ejecuta el siguiente comando para compilar el proyecto y descargar las dependencias definidas en el archivo
+   ```
+   mvn clean install
+   ```
+4. Ejecuta el proyecto con el siguiente comando
+  ```
+   mvn exec:java
+   ```
+5. En el navegador escribir las siguientes rutas, primero para ver los archivos estaticos
+    ```
+   http://localhost:35000/action/index.html
+   ```
+    ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/65062bcc-0a2b-4883-9b09-5a6028bcc23b)
+   ```
+   http://localhost:35000/action/image.jpg
+   ```
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/2f5edf3b-82b8-442b-ae71-7fa124ddd439)
+   ```
+   http://localhost:35000/action/tiburon.gif
+   ```
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/ef1c953f-e360-4a2c-87bb-def55f9da857)
+   ```
+   http://localhost:35000/action/script.js
+   ```
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/be5d080d-66a1-4224-8e34-958bd90bb0bc)
+   ```
+   http://localhost:35000/action/styles.css
+   ```   
+   ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/4a389e07-94d7-415c-91d7-d58eafdb39cf)
+
+7. 
