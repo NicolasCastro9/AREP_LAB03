@@ -78,6 +78,16 @@ Asegúrate de tener instalado Java y Maven en tu máquina antes de ejecutar el p
 ![image](https://github.com/NicolasCastro9/AREP_LAB03/assets/98556822/4c14fd5b-d65a-4631-882d-cfa05a45a5ab)
 
 
+9. Ejecutando pruebas
+   ```
+   mvn test
+   ``` 
+10. Generar JavaDoc
+   ```
+   mvn javadoc:javadoc
+   ``` 
+
+
 ## CONSTRUIDO CON
 
 MAVEN -  framework de gestión de proyectos de software
